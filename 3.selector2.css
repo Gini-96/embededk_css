@@ -1,0 +1,78 @@
+/* 가상 클래스 셀렉터 (Pseudo Class Selector) */
+
+a:link { font-size: 1.5em; color: black;}
+a:visited { color: violet; }
+a:hover { color: aqua; }
+a:active { color: yellow; }
+input[type="text"]:focus { background-color: lightgray; }
+
+input[type="checkbox"]:checked { font-weight: bold; }
+
+input[type="text"]:enabled { border: 3px solid orange; }
+
+input[type="text"]:disabled { border: 3px solid blue; }
+
+ul > li:first-child {
+    font-size: 2em;
+}
+
+ul > li:last-child {
+    font-size: 3em;
+}
+
+ul > li:nth-child(2) {
+    border: 1px solid violet;
+}
+
+ul > li:nth-last-child(2) {
+    border: 1px solid violet;
+}
+
+ul > li:first-of-type {
+    color: red;
+}
+
+ul > li:last-of-type {
+    color: yellow;
+}
+
+ul > li:nth-of-type(3) {
+    border: 1px solid saddlebrown;
+}
+
+ul > li:nth-last-of-type(3) {
+    border: 1px solid saddlebrown;
+}
+
+div:not(input) {
+    font-style: italic;
+}
+
+p::first-letter {
+    font-size: 2em;
+    color: blueviolet;
+}
+
+p::first-line {
+    text-decoration: underline;
+}
+
+p::before {
+    content: '[1절 시작]';
+}
+
+p::after {
+    content: '[1절 끝]';
+}
+
+p::selection {
+    color: chocolate;
+}
+
+
+
+
+
+
+
+

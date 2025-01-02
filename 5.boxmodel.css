@@ -1,0 +1,27 @@
+* {margin: 0; padding: 0;}
+p {
+    display: inline-block;
+    border: 5px solid purple;
+    margin: 20px;
+    padding: 20px;
+}
+#p1 {
+    background-color: yellow;
+    width: 200px;
+    height: 100px;
+}
+#p2 {
+    background-color: blue;
+    border-width: 5px;
+    border-color: green;
+    border-style: dashed;
+    border-radius: 10px;
+}
+#p3 {
+    background-color: red;
+    border-top: 50px solid orange;
+    border-right: 50px solid orange;
+    border-bottom: 50px solid orange;
+    border-left: 50px solid orange;
+    border-radius: 0 25px 25px 0;
+}

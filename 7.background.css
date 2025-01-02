@@ -1,0 +1,16 @@
+body {
+    background-image: url(assets/image.jpg);
+    /* background-repeat: repeat; */
+    background-attachment: fixed;
+}
+div {
+    background-color: aqua;
+    font-size: 100px;
+    height: 5000px;
+    opacity: 0.5;
+}
+p {
+    background-image: url(assets/image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}

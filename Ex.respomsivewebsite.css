@@ -1,0 +1,211 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+#background {
+    border: 3px solid black;
+    width: 1080px;
+    height: 720px;
+    background-image: url(assets/image2.jpg);
+    background-size: 1080px 720px;
+}
+h1 > a {
+    float: left;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.sign {
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    margin: 10px;
+    padding: 20px;
+    color: black;
+}
+.navicon {
+    cursor: pointer;
+    height: 60px;
+    padding: 28px 15px;
+    position: absolute;
+    top: 0; right: 0;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+}
+#nav1 {
+    clear: both;
+}
+.li1 {
+    position: relative;
+    left: 200px;
+    float: left;
+    list-style: none;
+    width: 80px;
+    border: 2px solid black;
+    background-color: violet;
+    font-weight: bold;
+    color: white;
+    margin-right: 30px;
+    text-align: center;
+    padding: 10px 10px;
+}
+section {
+    clear: both;
+}
+#nav2 {
+    float: left;
+}
+#ul1 {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    border: 2px solid black;
+    background-color: violet;
+    font-size: 20px;
+    text-align: center;
+    width: 100px;
+    height: 200px;
+    text-align: center;
+}
+/* nav icon의 내부 막대 */
+.navicon-bar {
+    background-color: #333;
+    display: block;
+    position: relative;
+    /* navigation icon animation */
+    transition: background-color .2s ease-out;
+    width: 20px;
+    height: 3px;
+}
+.navicon-bar::before,
+.navicon-bar::after {
+    background-color: #333;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    /* navigation icon animation */
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.navicon-bar::before {
+    top: -7px;
+}
+.navicon-bar::after {
+    top: 7px;
+}
+/* toggle navigation icon */
+.nav-toggle:checked ~ .navicon > .navicon-bar {
+    background: transparent;
+}
+.nav-toggle:checked ~ .navicon > .navicon-bar::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+.nav-toggle:checked ~ .navicon > .navicon-bar::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+.li2 {
+    list-style: none;
+    font-size: 15px;
+    margin: 10px;
+}
+article {
+    left: 200px;
+    top: 30px;
+    position: relative;
+    background-color: aqua;
+    border: 2px solid black;
+    width: 500px;
+    height: 400px;
+}
+#copy {
+    bottom: 0;
+    left: 20px;
+    position: absolute;
+}
+#banner {
+    border: 2px solid black;
+    width: 50px;
+    background-color: aquamarine;
+    text-align: center;
+    position: fixed;
+    right: 150px;
+    top: 150px;
+}
+.nav-toggle {
+    display: none;
+}
+.navicon {
+    display: none;
+}
+@media screen and (max-width: 800px) {
+    #background {
+        width: 800px;
+        background-image: url(assets/image.jpg);
+        background-size: 800px;
+    }
+    #nav1 {
+        display: block;
+    }
+    #banner {
+        display: none;
+    }
+}
+@media screen and (max-width: 480px) {
+    header {
+        height: 60px;
+    }
+    .sign {
+        display: none;
+    }
+    #background {
+        width: 480px;
+        background-image: url(assets/image.jpg);
+        background-size: 100%;
+    }
+    section {
+        display: block;
+    }
+    #nav2 > #ul1{
+        font-size: 160%;
+        left: 10px;
+        width: 400px;
+        height: 50px;
+        margin: 10px;
+        line-height: 50px;
+    }
+    #nav2 > #ul1 > .li2{
+        margin: 2px;
+        display: inline;
+    }
+    article {
+        left: 20px;
+        clear: both;
+        width: 400px;
+        height: 300px;
+        text-align: center;
+    }
+    .nav-items {
+        display: none;
+    }
+    .navicon {
+        display: block;
+    }
+    .nav-toggle:checked ~ .nav-items {
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(0, 0, 0, 0.05);
+    }
+    .nav-items > .li1 {
+        left: 30px;
+        margin: 5px;
+        padding: 0;
+        line-height: 50px;
+        opacity: 0.8;
+    }
+}
